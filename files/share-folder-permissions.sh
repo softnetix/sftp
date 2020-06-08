@@ -1,4 +1,6 @@
 #!/bin/bash
+sleep 5
+
 for user_home in /home/* ; do
   if [ -d "$user_home" ]; then
     username=`basename $user_home`
