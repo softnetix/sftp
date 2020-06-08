@@ -15,6 +15,9 @@ COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint /
 
+# Fix share folder permissions
+COPY files/share-folder-permissions.sh /etc/sftp.d/init.sh
+
 EXPOSE 22
 
 ENTRYPOINT ["/entrypoint"]
