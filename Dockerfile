@@ -17,6 +17,7 @@ COPY files/entrypoint /
 
 # Fix share folder permissions
 COPY files/share-folder-permissions.sh /etc/sftp.d/init.sh
+RUN chmod +x /etc/sftp.d/init.sh
 
 EXPOSE 22
 
